@@ -40,6 +40,11 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v3
 
+    - name: Run optional script
+      run: ./scripts/optional-step.sh
+      continue-on-error: true
+
+
     # Initializes the CodeQL tools for scanning.
     - name: Initialize CodeQL
       uses: github/codeql-action/init@v2
